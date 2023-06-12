@@ -48,7 +48,7 @@ extension Color {
         endPoint: .trailing
     )
     
-//    static let bottomSheetBorderMiddle = LinearGradient(gradient: Gradient(colors: [.white, .clear, .clear]), startPoint: .top, endPoint: .bottom)
+    static let bottomSheetBorderMiddle = LinearGradient(gradient: Gradient(colors: [.white, .clear, .clear]), startPoint: .top, endPoint: .bottom)
     
     static let bottomSheetBorderTop = LinearGradient(
         gradient: Gradient(
@@ -79,5 +79,30 @@ extension View {
             .background(
                 Blur(radius: radius, opaque: opaque)
             )
+    }
+}
+
+
+extension View {
+    func innerShadow<S: Shape, SStyle: ShapeStyle>(
+        shape: S,
+        color: SStyle,
+        lineWidth: CGFloat = 1,
+        offsetX: CGFloat = 0,
+        offsetY: CGFloat = 0,
+        blur: CGFloat = 4,
+        blendMode: BlendMode = .normal,
+        opacity: Double = 1
+    ) -> some View {
+        return self
+            .overlay {
+                shape
+                    .stroke(color, lineWidth: lineWidth)
+                    .blendMode(blendMode)
+                    .offset(x: offsetX, y: offsetY)
+                    .blur(radius: blur)
+                    .mask(shape)
+                    .opacity(opacity)
+            }
     }
 }
