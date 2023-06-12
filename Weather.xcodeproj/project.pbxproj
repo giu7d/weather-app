@@ -51,9 +51,10 @@
 		A231E86B2A37AD0300B4A9AC /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				A231E87C2A37AE8B00B4A9AC /* Utils */,
+				A231E87B2A37AE7F00B4A9AC /* Models */,
 				A231E87A2A37AD4900B4A9AC /* Views */,
 				A231E86C2A37AD0300B4A9AC /* WeatherApp.swift */,
-				A231E86E2A37AD0300B4A9AC /* ContentView.swift */,
 				A231E8702A37AD0400B4A9AC /* Assets.xcassets */,
 				A231E8722A37AD0400B4A9AC /* Preview Content */,
 			);
@@ -71,8 +72,55 @@
 		A231E87A2A37AD4900B4A9AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A231E87E2A37AE9D00B4A9AC /* Main */,
+				A231E8802A37AED000B4A9AC /* Navigation */,
+				A231E8812A37AEDB00B4A9AC /* Detail */,
+				A231E87F2A37AEC300B4A9AC /* Components */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A231E87B2A37AE7F00B4A9AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A231E87C2A37AE8B00B4A9AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A231E87E2A37AE9D00B4A9AC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A231E86E2A37AD0300B4A9AC /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A231E87F2A37AEC300B4A9AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A231E8802A37AED000B4A9AC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A231E8812A37AEDB00B4A9AC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
