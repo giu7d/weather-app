@@ -9,8 +9,8 @@ import SwiftUI
 import BottomSheet
 
 enum BottomSheetPosition: CGFloat, CaseIterable {
-    case top = 0.83 // 702/844
-    case middle = 0.385 // 325/844
+    case top = 0.83
+    case middle = 0.38
 }
 
 struct HomeView: View {
@@ -57,8 +57,21 @@ struct HomeView: View {
                 }
                 .padding(.top, 51)
                 
-                // MARK: TabBar
-                TabBar(action: {})
+                // MARK: Bottom Sheet
+                BottomSheetView(position: $bottomSheetPosition) {
+//                    Text(bottomSheetPosition.rawValue.formatted())
+                } content: {
+                    ForecastView()
+                }
+                
+                // MARK: Tab Bar
+                TabBar(action: {
+                    if (bottomSheetPosition == .top){
+                        bottomSheetPosition = .middle
+                    } else {
+                        bottomSheetPosition = .top
+                    }
+                })
             }
         }
         .navigationBarHidden(true)

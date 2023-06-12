@@ -3,10 +3,10 @@
     {
       "identity" : "bottomsheet",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lucaszischka/BottomSheet",
+      "location" : "https://github.com/Wouter125/BottomSheet",
       "state" : {
-        "revision" : "4c9ef84552712e0117c37d4893270fdc28fb9288",
-        "version" : "3.1.0"
+        "revision" : "44ab4103c63b07777bef40b91d5a21c3a12dbda4",
+        "version" : "1.4.5"
       }
     }
   ],
