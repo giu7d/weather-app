@@ -12,6 +12,9 @@
 		A231E8712A37AD0400B4A9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A231E8702A37AD0400B4A9AC /* Assets.xcassets */; };
 		A231E8742A37AD0400B4A9AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A231E8732A37AD0400B4A9AC /* Preview Assets.xcassets */; };
 		A231E8832A37AF5D00B4A9AC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231E8822A37AF5D00B4A9AC /* Extensions.swift */; };
+		A231E8852A37B13F00B4A9AC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231E8842A37B13F00B4A9AC /* HomeView.swift */; };
+		A231E8882A37B4D300B4A9AC /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = A231E8872A37B4D300B4A9AC /* BottomSheet */; };
+		A231E88A2A37B7B900B4A9AC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231E8892A37B7B900B4A9AC /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		A231E8702A37AD0400B4A9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A231E8732A37AD0400B4A9AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A231E8822A37AF5D00B4A9AC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A231E8842A37B13F00B4A9AC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A231E8892A37B7B900B4A9AC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A231E8882A37B4D300B4A9AC /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A231E86E2A37AD0300B4A9AC /* ContentView.swift */,
+				A231E8842A37B13F00B4A9AC /* HomeView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 		A231E8802A37AED000B4A9AC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				A231E8892A37B7B900B4A9AC /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -142,6 +150,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				A231E8872A37B4D300B4A9AC /* BottomSheet */,
+			);
 			productName = Weather;
 			productReference = A231E8692A37AD0300B4A9AC /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +181,9 @@
 				Base,
 			);
 			mainGroup = A231E8602A37AD0300B4A9AC;
+			packageReferences = (
+				A231E8862A37B4D300B4A9AC /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = A231E86A2A37AD0300B4A9AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A231E86F2A37AD0300B4A9AC /* ContentView.swift in Sources */,
+				A231E8852A37B13F00B4A9AC /* HomeView.swift in Sources */,
 				A231E8832A37AF5D00B4A9AC /* Extensions.swift in Sources */,
 				A231E86D2A37AD0300B4A9AC /* WeatherApp.swift in Sources */,
+				A231E88A2A37B7B900B4A9AC /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A231E8862A37B4D300B4A9AC /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucaszischka/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A231E8872A37B4D300B4A9AC /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A231E8862A37B4D300B4A9AC /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A231E8612A37AD0300B4A9AC /* Project object */;
 }
